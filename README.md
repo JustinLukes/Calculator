@@ -1,2 +1,5 @@
 # Calculator
-Black
+Domácí úkol do Algoritmizace
+
+Potřeba stáhnout colorama library.
+
