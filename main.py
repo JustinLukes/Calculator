@@ -70,13 +70,6 @@ def krat(number1,number2):
 
 
 
-
-
-
-
-
-
-
 print(Fore.YELLOW + f"""
    ______      __           __      __            
   / ____/___ _/ /______  __/ /___ _/ /_____  _____
@@ -113,6 +106,7 @@ O {Fore.CYAN}(Odmocniny){Fore.BLUE}
             break
         elif operace == "-":
             number2 = input(Fore.YELLOW + "Zadej druhé číslo: " + Fore.WHITE)
+            minus(number1,number2)
             break
         elif operace == "/":
             number2 = input(Fore.YELLOW + "Zadej druhé číslo: " + Fore.WHITE)
