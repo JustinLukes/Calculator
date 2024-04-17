@@ -8,10 +8,6 @@ except:
     exit()
 init()
 
-
-
-
-
 def bsod(reason):
     print(Back.BLUE)
     for i in range(0,100,10):
@@ -36,6 +32,27 @@ Restarting... {i}%
         sleep(1)
     print(Style.RESET_ALL)
     os.system("cls")
+
+
+
+def minus(number1,number2):
+    number1 = int(number1)
+    number2 = int(number2)
+    print(f"{Fore.GREEN}Výsledek je {Fore.YELLOW}{number1 - number2}{Fore.WHITE}")
+    
+def plus(number1,number2):
+    number1 = int(number1)
+    number2 = int(number2)
+    print(f"{Fore.GREEN}Výsledek je {Fore.YELLOW}{number1 + number2}{Fore.WHITE}")
+def deleno(number1,number2):
+    number1 = int(number1)
+    number2 = int(number2)
+    print(f"{Fore.GREEN}Výsledek je {Fore.YELLOW}{number1 / number2}{Fore.WHITE}")
+def krat(number1,number2):
+    number1 = int(number1)
+    number2 = int(number2)
+    print(f"{Fore.GREEN}Výsledek je {Fore.YELLOW}{number1 * number2}{Fore.WHITE}")
+
 
 
 
@@ -91,32 +108,23 @@ O {Fore.CYAN}(Odmocniny){Fore.BLUE}
             print(f"{Fore.GREEN}Děkuji moc za používání kalkulačky")
             exit()
         elif operace == "+":
-            number1 = int(number1)
             number2 = input(Fore.YELLOW + "Zadej druhé číslo: " + Fore.WHITE)
-            number2 = int(number2)
-            print(f"{Fore.GREEN}Výsledek je {Fore.YELLOW}{number1 + number2}{Fore.WHITE}")
+            plus(number1,number2)
             break
         elif operace == "-":
-            number1 = int(number1)
             number2 = input(Fore.YELLOW + "Zadej druhé číslo: " + Fore.WHITE)
-            number2 = int(number2)
-            print(f"{Fore.GREEN}Výsledek je {Fore.YELLOW}{number1 - number2}{Fore.WHITE}")
             break
         elif operace == "/":
-            number1 = int(number1)
             number2 = input(Fore.YELLOW + "Zadej druhé číslo: " + Fore.WHITE)
-            number2 = int(number2)
             if not number1 == 0 or not number2 == 0:
-                print(f"{Fore.GREEN}Výsledek je {Fore.YELLOW}{number1 / number2}{Fore.WHITE}")
+                deleno(number1, number2)
                 break
             else:
                 bsod("Nemužeš dělit nulou")
                 break
         elif operace == "*":
-            number1 = int(number1)
             number2 = input(Fore.YELLOW + "Zadej druhé číslo: " + Fore.WHITE)
-            number2 = int(number2)
-            print(f"{Fore.GREEN}Výsledek je {Fore.YELLOW}{number1 * number2}{Fore.WHITE}")
+            krat(number1,number2)
             break
         elif operace == "M":
             number1 = int(number1)
